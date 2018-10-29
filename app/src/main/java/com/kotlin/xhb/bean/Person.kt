@@ -1,4 +1,4 @@
-package com.kotlin.xhb
+package com.kotlin.xhb.bean
 
 /**
  * Created by xhb on 2018/10/28.

@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Kotlin_Demo</string>
-
+    <!--SplashActiviy背景图的网络地址-->
     <string name="url">http://avatar.csdn.net/4/0/7/1_zhuhai__yizhi.jpg</string>
 </resources>

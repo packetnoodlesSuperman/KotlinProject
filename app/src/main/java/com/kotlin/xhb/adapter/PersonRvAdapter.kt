@@ -1,11 +1,13 @@
-package com.kotlin.xhb
+package com.kotlin.xhb.adapter
 
-import android.app.Activity
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.kotlin.xhb.BR
+import com.kotlin.xhb.R
+import com.kotlin.xhb.bean.Person
 
 /**
  * Created by xhb on 2018/10/28.

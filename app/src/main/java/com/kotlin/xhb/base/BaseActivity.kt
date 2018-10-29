@@ -1,9 +1,8 @@
-package com.kotlin.xhb
+package com.kotlin.xhb.base
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 
 abstract class BaseActivity<CVB: ViewDataBinding> : AppCompatActivity() {

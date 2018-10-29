@@ -1,12 +1,13 @@
-package com.kotlin.xhb
+package com.kotlin.xhb.ui
 
 import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
+import com.kotlin.xhb.bean.Person
+import com.kotlin.xhb.adapter.PersonRvAdapter
+import com.kotlin.xhb.R
 import com.kotlin.xhb.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         //列表
         contentView.recyclerView.layoutManager = LinearLayoutManager(this)
         contentView.recyclerView.adapter = PersonRvAdapter(LayoutInflater.from(this),
-            Array(10, init = {it -> Person("Tom--"+"${it}", it)})
+                Array(10, init = { it -> Person("Tom--" + "${it}", it) })
         )
     }
 }

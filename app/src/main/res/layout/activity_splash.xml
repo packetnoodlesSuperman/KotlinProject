@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--app：imageUrl 加载网络背景图-->
         <ImageView
             android:scaleType="fitXY"
             app:imageUrl="@{@string/url}"
