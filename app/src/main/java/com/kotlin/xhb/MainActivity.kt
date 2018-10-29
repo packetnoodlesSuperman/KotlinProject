@@ -19,13 +19,12 @@ class MainActivity : AppCompatActivity() {
         contentView = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         contentView.person = Person("tom", 12)
 
-        var list: Array<Person> = Array<Person>(10, init = {it -> Person("Tom--"+"${it}", it)})
-        for (i in 0 .. 9) {
-            Log.e("tag","Person --- ${list[i].name}")
-        }
+
 
         //列表
         contentView.recyclerView.layoutManager = LinearLayoutManager(this)
-        contentView.recyclerView.adapter = PersonRvAdapter(LayoutInflater.from(this), list)
+        contentView.recyclerView.adapter = PersonRvAdapter(LayoutInflater.from(this),
+            Array(10, init = {it -> Person("Tom--"+"${it}", it)})
+        )
     }
 }
