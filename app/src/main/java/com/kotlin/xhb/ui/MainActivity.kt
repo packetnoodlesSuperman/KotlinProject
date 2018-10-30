@@ -12,7 +12,7 @@ import com.kotlin.xhb.base.BaseActivity
 import com.kotlin.xhb.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-    
+
     override fun initContentView(): Int = R.layout.activity_main
 
     override fun initData() {

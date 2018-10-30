@@ -1,4 +1,4 @@
-package com.kotlin.xhb.http
+package com.kotlin.xhb.net
 
 import com.kotlin.xhb.App
 import com.kotlin.xhb.utils.NetWorkUtils

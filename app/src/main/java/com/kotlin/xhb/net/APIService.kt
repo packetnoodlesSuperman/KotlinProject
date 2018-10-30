@@ -1,4 +1,4 @@
-package com.kotlin.xhb.http
+package com.kotlin.xhb.net
 
 import retrofit2.http.GET
 import retrofit2.http.Headers
