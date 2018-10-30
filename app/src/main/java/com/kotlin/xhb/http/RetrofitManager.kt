@@ -10,6 +10,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
 
+/**
+ * @desc https://blog.csdn.net/wu996489865/article/details/72726177
+ */
 class RetrofitManager private constructor(url: String) : Interceptor {
 
     //短缓存有效期为10分钟
@@ -41,7 +44,6 @@ class RetrofitManager private constructor(url: String) : Interceptor {
 
     companion object {
         fun builder(url: String): RetrofitManager {
-            println(RetrofitManager.javaClass.classes)
             return RetrofitManager(url)
         }
     }
@@ -78,5 +80,4 @@ class RetrofitManager private constructor(url: String) : Interceptor {
                     .removeHeader("Pragma").build()
         }
     }
-
 }

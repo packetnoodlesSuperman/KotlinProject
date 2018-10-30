@@ -8,24 +8,21 @@ import android.view.LayoutInflater
 import com.kotlin.xhb.bean.Person
 import com.kotlin.xhb.adapter.PersonRvAdapter
 import com.kotlin.xhb.R
+import com.kotlin.xhb.base.BaseActivity
 import com.kotlin.xhb.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+    
+    override fun initContentView(): Int = R.layout.activity_main
 
-    lateinit var contentView: ActivityMainBinding;
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        contentView = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        contentView.person = Person("tom", 12)
-
-
+    override fun initData() {
+        viewDataBinding.person = Person("tom", 12)
 
         //列表
-        contentView.recyclerView.layoutManager = LinearLayoutManager(this)
-        contentView.recyclerView.adapter = PersonRvAdapter(LayoutInflater.from(this),
+        viewDataBinding.recyclerView.layoutManager = LinearLayoutManager(this)
+        viewDataBinding.recyclerView.adapter = PersonRvAdapter(LayoutInflater.from(this),
                 Array(10, init = { it -> Person("Tom--" + "${it}", it) })
         )
     }
+
 }
