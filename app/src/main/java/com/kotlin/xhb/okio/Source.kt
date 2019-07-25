@@ -2,6 +2,11 @@ package com.kotlin.xhb.okio
 
 import java.io.Closeable
 
+/**
+ * 1. 读
+ * 2. 超时
+ * 3. 关闭流
+ */
 interface Source : Closeable {
     @Throws(IOException::class)
     fun read(sink: Buffer, byteCount: Long): Long
