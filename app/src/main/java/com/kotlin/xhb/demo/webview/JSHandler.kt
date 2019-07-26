@@ -21,7 +21,6 @@ class JSHandler {
         } catch (e: JSONException) {
 
         }
-
     }
 
     private fun getActionObject(jsActions: HashMap<String, JSAction>, jsMessage: JSMessage): JSAction {
@@ -36,14 +35,14 @@ class JSHandler {
     @Throws(JSONException::class)
     private fun parseJSonString(jsonStr: String): JSMessage {
         return with(receiver = JSONObject(jsonStr)) {
-            var jsMessage = JSMessage()
-            jsMessage.action = getString(JSMessage.ACTION)
-            jsMessage.params = getString(JSMessage.PARAMS)
-            jsMessage.callback = getString(JSMessage.CALLBACK)
-            return jsMessage
+            return with(JSMessage()) {
+                action = getString(JSMessage.ACTION)
+                params = getString(JSMessage.PARAMS)
+                callback = getString(JSMessage.CALLBACK)
+                return this
+            }
         }
     }
-
 
     private fun invokeHandler(jsAction: JSAction, jsMessage: JSMessage) {
         mainHandler.post({

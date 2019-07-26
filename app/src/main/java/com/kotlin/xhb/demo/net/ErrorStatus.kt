@@ -15,8 +15,11 @@ package com.kotlin.xhb.demo.net
 object ErrorStatus {
 
     /**
-     * @JvmField 将属性编译为Java变量  --> 编译成java代码后 就是 ErrorStatus.SUCCESS
-     * @JvmStatic 将对象的方法编译成功Java静态方法  --> 编译成java代码后 就是 ErrorStatus.静态方法
+     * @JvmField 消除了变量的getter与setter方法 ···
+     * @JvmField 修饰的变量不能是private属性的
+     * @JvmStatic 只能在object类或者伴生对象companion object中使用，而@JvmField没有这些限制
+     * @JvmStatic 一般用于修饰方法，使方法变成真正的静态方法；如果修饰变量不会消除变量的getter与setter方法，
+     *             但会使getter与setter方法和变量都变成静态
      * https://blog.csdn.net/maosidiaoxian/article/details/81778057
      */
     @JvmField

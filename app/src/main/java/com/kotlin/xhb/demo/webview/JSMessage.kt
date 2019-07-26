@@ -1,8 +1,10 @@
 package com.kotlin.xhb.demo.webview
 
-data class JSMessage(var action: String? = null,
-                     var params: String? = null,
-                     var callback: String? = null) {
+class JSMessage {
+
+    lateinit var action: String
+    lateinit var params: String
+    lateinit var callback: String
 
     companion object {
         val ACTION = "nativeName"
